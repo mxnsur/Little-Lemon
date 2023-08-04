@@ -13,7 +13,7 @@ export default function App() {
       <WelcomeScreen />
     </View>
     <View>
-    <LittleLemonFooter />
+    <LittleLemonFooter style={styles.footerContainer} />
     </View> 
     </>
   );

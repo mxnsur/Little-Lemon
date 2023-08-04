@@ -7,7 +7,7 @@ export default function WelcomeScreen() {
         <Text style={WelcomeScreenStyles.WelcomeText}>
         Welcome to Little Lemon
         </Text>
-        <Text style={WelcomeScreenStyles.itemText}>
+        <Text style={WelcomeScreenStyles.regularText}>
         Little Lemon is a charming neighborhood bistro that serves simple food
         and classic cocktails in a lively but casual environment. We would love
         to hear your experience with us!
@@ -26,7 +26,7 @@ const WelcomeScreenStyles = StyleSheet.create({
         color: '#EDEFEE',
         textAlign: "center",
     },
-    itemText: {
+    regularText: {
         fontSize: 25,
           padding: 20,
           marginVertical: 8,
