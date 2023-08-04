@@ -10,11 +10,16 @@ export default function App() {
     <>
     <View style={{flex: 1, backgroundColor: '#495E57', }}>
       <LittleLemonHeader />
-      <MenuItems />
+      <WelcomeScreen />
       </View>
     <View style={{ backgroundColor: '#495E57' }}>
     <LittleLemonFooter />
     </View> 
+    <View>
+  <Text>Some text
+    <Text> Some more text</Text>
+  </Text>
+</View>
     </>
   )
 }
