@@ -11,14 +11,14 @@ export default function WelcomeScreen() {
         <Text
         style={{ 
             padding: 40, 
-            fontSize: 50, 
+            fontSize: 35, 
             color: '#EDEFEE',
             textAlign: "center" }}>
         Welcome to Little Lemon
         </Text>
         <Text
         style={{
-          fontSize: 38,
+          fontSize: 25,
           padding: 20,
           marginVertical: 8,
           color: '#EDEFEE',
