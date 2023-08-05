@@ -25,19 +25,22 @@ return (
         value={firstName} 
         onChangeText={onChangeFirstName} 
         placeholder={'Nome'}
+        clearButtonMode={'always'}
         /> 
         <TextInput 
         style={styles.input} 
         value={lastName} 
         onChangeText={onChangeLastName}
         placeholder={'Sobrenome'} 
+        clearButtonMode={'always'}
         /> 
         <TextInput 
         style={styles.input} 
         value={phoneNumber} 
         onChangeText={onChangePhoneNumber} 
         placeholder={'Celular'} 
-        keyboardType={"phone-pad"} 
+        keyboardType={"phone-pad"}
+        clearButtonMode={'always'} 
       /> 
          <TextInput 
         style={styles.messageInput} 
@@ -46,6 +49,7 @@ return (
         placeholder={'Mensagem'} 
         multiline={true}
         maxLength={250}
+        clearButtonMode={'always'}
         /> 
     </ScrollView> 
     </KeyboardAvoidingView>

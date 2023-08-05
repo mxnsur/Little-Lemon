@@ -15,6 +15,7 @@ return (
         onChangeText={onChangeEmail} 
         placeholder={'Email'}
         keyboardType={'email-address'}
+        clearButtonMode={'always'}
         /> 
         <TextInput
         secureTextEntry={true}
@@ -23,6 +24,7 @@ return (
         onChangeText={onChangePassword}
         placeholder={'Senha'} 
         keyboardType={'default'}
+        clearButtonMode={'always'}
         /> 
     </ScrollView>
 )
