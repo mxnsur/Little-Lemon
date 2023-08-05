@@ -5,13 +5,14 @@ import WelcomeScreen from './src/WelcomeScreen'
 import MenuItems from './src/MenuItems'
 import FeedbackForm from './src/FeedbackForm'
 import LoginScreen from './src/LoginScreen'
+import Welcome from './src/Welcome'
 
 export default function App() {
   return (
     <>
     <View style={styles.container}>
-      <LittleLemonHeader />
-      <LoginScreen />
+      
+      <Welcome/>
     </View>
     </>
   );
@@ -20,6 +21,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#333333',
   },
 });
