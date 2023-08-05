@@ -96,13 +96,13 @@ const menuItemsToDisplay = [
     sectionHeader: {
       backgroundColor: '#fbdabb',
       color: '#333333',
-      fontSize: 34,
+      fontSize: 30,
       flexWrap: 'wrap',
       textAlign: 'center',
     },
     itemText: {
       color: '#F4CE14',
-      fontSize: 32,
+      fontSize: 25,
     },
     separator: {
       borderBottomWidth: 1,
