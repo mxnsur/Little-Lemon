@@ -12,7 +12,7 @@ const menuItemsToDisplay = [
           { name: 'Kofta', price: '$5.00' },
           { name: 'Eggplant Salad', price: '$8.50' },
         ],
-      },
+      }, 
       {
         title: 'Main Dishes',
         data: [
