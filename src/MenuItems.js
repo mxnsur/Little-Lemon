@@ -65,7 +65,7 @@ const menuItemsToDisplay = [
   
    const Footer = () => (
       <Text style={menuStyles.footerText}>
-        All Rights Reserved by Little Lemon
+        All Rights Reserved by Little Lemon 2023
       </Text>
     );
 
