@@ -15,7 +15,8 @@ return (
         onChangeText={onChangeEmail} 
         placeholder={'Email'}
         /> 
-        <TextInput 
+        <TextInput
+        secureTextEntry={true}
         style={styles.input} 
         value={password} 
         onChangeText={onChangePassword}
