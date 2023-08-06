@@ -1,4 +1,4 @@
-package com.criando;
+package com.teste1;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

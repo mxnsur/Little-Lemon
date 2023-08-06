@@ -1,4 +1,4 @@
-package com.criando;
+package com.teste1;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

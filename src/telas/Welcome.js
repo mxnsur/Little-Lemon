@@ -8,35 +8,6 @@ const Welcome = () => {
       <Text style={styles.title}>
         Little Lemon, seu bistrô mediterrâneo local
       </Text>
-
-      <Image
-        style={styles.image}
-        source={require('../src/img/Picture1.png')}
-        resizeMode="cover"
-        accessible={true}
-        accessibilityLabel={'Little Lemon Logo'}
-      />
-      <Image
-        style={styles.image}
-        source={require('../src/img/Picture2.png')}
-        resizeMode="cover"
-        accessible={true}
-        accessibilityLabel={'Little Lemon Logo'}
-      />
-      <Image
-        style={styles.image}
-        source={require('../src/img/Picture3.png')}
-        resizeMode="cover"
-        accessible={true}
-        accessibilityLabel={'Little Lemon Logo'}
-      />
-      <Image
-        style={styles.image}
-        source={require('../src/img/Picture4.png')}
-        resizeMode="cover"
-        accessible={true}
-        accessibilityLabel={'Little Lemon Logo'}
-      />
     </ScrollView>
   );
 };
