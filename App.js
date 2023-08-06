@@ -16,7 +16,7 @@ export default function App() {
     <>
       <NavigationContainer>
         <View style={styles.container}>
-          <Stack.Navigator initialRouteName="Menu" screenOptions={{ headerStyle: {backgroundColor: '#FBDABB'} }}>
+          <Stack.Navigator initialRouteName="Login" screenOptions={{ headerStyle: {backgroundColor: '#FBDABB'} }}>
             <Stack.Screen 
             options= {{ title: 'Login' }} 
             name="Login" 
