@@ -1,50 +1,21 @@
 import * as React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
 
-
-import LoginScreen from './src/telas/LoginScreen';
 import Welcome from './src/telas/Welcome';
 import Cardapio from './src/telas/Cardapio';
 
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/Ionicons';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
-const Tab = createBottomTabNavigator();
-const myIcon = <Icon name="rocket" size={30} color="#900" />;
+const Drawer = createDrawerNavigator ();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator
-      screenOptions={({ route }) => ({
-        tabBarIcon: ({ focused, color, size }) => {
-          let iconName;
-
-          if (route.name === 'Menu') {
-            iconName = focused
-              ? 'information-circle'
-              : 'information-circle-outline';
-          } else if (route.name === 'Cardapio') {
-            iconName =  'list-outline';
-          }
-          return <Icon name={iconName} size={size} color={color} />;
-        },
-        tabBarActiveTintColor: 'tomato',
-        tabBarInactiveTintColor: 'grey',
-      })}>
-      <Tab.Screen name="Menu" component={Welcome} />
-      <Tab.Screen name="Cardapio" component={Cardapio} />
-      </Tab.Navigator>
+      <Drawer.Navigator
+        screenOptions={{ drawerPosition: 'left' }}>
+        <Drawer.Screen name="Menu" component={Welcome} />
+        <Drawer.Screen name="Cardapio" component={Cardapio} />
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#333333',
-  },
-  footerContainer: { backgroundColor: '#333333' },
-});
-
