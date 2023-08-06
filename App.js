@@ -2,11 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import LittleLemonHeader from './src/componentes/LittleLemonHeader'
 import LittleLemonFooter from './src/componentes/LittleLemonFooter'
-import WelcomeScreen from '../src/telas/WelcomeScreen'
-import MenuItems from '../src/telas/Cardapio'
-import FeedbackForm from '../src/telas/FeedbackForm'
-import LoginScreen from '../src/telas/LoginScreen'
-import Welcome from '../src/telas/Welcome'
+import WelcomeScreen from './src/telas/WelcomeScreen'
 
 export default function App() {
   return (
@@ -15,9 +11,6 @@ export default function App() {
       <LittleLemonHeader />
       <WelcomeScreen />
     </View>
-    <View style={styles.footerContainer}>
-    <LittleLemonFooter />
-    </View> 
     </>
   );
 }
