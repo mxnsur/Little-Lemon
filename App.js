@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
+
 import LoginScreen from './src/telas/LoginScreen';
 import Welcome from './src/telas/Welcome';
 import Cardapio from './src/telas/Cardapio';
-import Icon from 'react-native-vector-icons/Ionicons';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Tab = createBottomTabNavigator();
 const myIcon = <Icon name="rocket" size={30} color="#900" />;
