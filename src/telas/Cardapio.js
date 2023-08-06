@@ -62,7 +62,6 @@ const menuItemsToDisplay = [
   );
   
   const MenuItems = () => {
-    const [showMenu, setShowMenu] = useState(false);
 
     const renderItem = ({ item }) => <Item name={item.name} price={item.price} />;
   
@@ -74,23 +73,6 @@ const menuItemsToDisplay = [
 
     return (
       <View style={menuStyles.container}>
-        {!showMenu && (
-        <Text style={menuStyles.infoSection}>
-          Little Lemon é um charmoso bistrô de bairro que serve comida simples
-           e cocktails clássicos num ambiente animado mas casual. Veja nosso
-           menu para explorar a nossa cozinha com especialidades diárias!
-        </Text>
-        )}
-        <Pressable
-        style={menuStyles.button}
-        onPress={() => {
-          setShowMenu(!showMenu);
-        }}>
-        <Text style={menuStyles.buttonText}>
-          {showMenu ? 'Início' : 'Ver Cardápio'}
-        </Text>
-      </Pressable>
-      {showMenu && (
         <SectionList
           keyExtractor={(item, index) => item + index}
           sections={menuItemsToDisplay}
@@ -99,7 +81,6 @@ const menuItemsToDisplay = [
           ListFooterComponent={Footer}
           ItemSeparatorComponent={Separator}>
         </SectionList>
-        )}
       </View>
     );
   };
@@ -107,6 +88,7 @@ const menuItemsToDisplay = [
   const menuStyles = StyleSheet.create({
     container: {
       flex: 1,
+      backgroundColor: "#333333"
     },
     innerContainer: {
         paddingHorizontal: 40,
@@ -115,9 +97,11 @@ const menuItemsToDisplay = [
         justifyContent: 'space-between',
     },
     sectionHeader: {
-      backgroundColor: '#fbdabb',
+      backgroundColor: '#ee9972',
       color: '#333333',
-      fontSize: 30,
+      paddingHorizontal: 10,
+      paddingVertical: 5,
+      fontSize: 25,
       flexWrap: 'wrap',
       textAlign: 'center',
     },

@@ -1,14 +1,19 @@
 import React from 'react';
-import { ScrollView, Image, StyleSheet, Text } from 'react-native';
+import { View, Image, StyleSheet, Text, Pressable } from 'react-native';
 
-const Welcome = () => {
+const Welcome = ({ navigation }) => {
   return (
-    <ScrollView style={styles.container}>
-      <Image style={styles.logo} source={require('../src/img/littleLemonHeader.png')} />
+    <View style={styles.container}>
+      <Image style={styles.logo} source={require('../img/littleLemonHeader.png')} />
       <Text style={styles.title}>
         Little Lemon, seu bistrô mediterrâneo local
       </Text>
-    </ScrollView>
+      <Pressable onPress={() => navigation.navigate('Cardapio')}>
+      <Text style={styles.title}>
+        Ver Menu
+      </Text>
+      </Pressable>
+    </View>
   );
 };
 
@@ -28,7 +33,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 24,
-    marginTop: 25,
     backgroundColor: '#fff',
   },
 

@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-import LittleLemonHeader from './src/componentes/LittleLemonHeader';
-import LittleLemonFooter from './src/componentes/LittleLemonFooter';
-import WelcomeScreen from './src/telas/WelcomeScreen';
 import LoginScreen from './src/telas/LoginScreen';
+import Welcome from './src/telas/Welcome';
+import Cardapio from './src/telas/Cardapio';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -17,14 +16,25 @@ export default function App() {
     <>
       <NavigationContainer>
         <View style={styles.container}>
-          <LittleLemonHeader />
-          <Stack.Navigator initialRouteName="Login">
-            <Stack.Screen name="Welcome" component={WelcomeScreen} />
-            <Stack.Screen name="Login" component={LoginScreen} />
+          <Stack.Navigator initialRouteName="Menu" screenOptions={{ headerStyle: {backgroundColor: '#FBDABB'} }}>
+            <Stack.Screen 
+            options= {{ title: 'Login' }} 
+            name="Login" 
+            component={LoginScreen} 
+            />
+            <Stack.Screen 
+            options={{ title: 'Menu' }} 
+            name="Menu" 
+            component={Welcome} 
+            />
+            <Stack.Screen 
+            options= {{ title: 'Cardapio' }} 
+            name="Cardapio" 
+            component={Cardapio} 
+            />
           </Stack.Navigator>
         </View>
         <View style={styles.footerContainer}>
-          <LittleLemonFooter />
         </View>
       </NavigationContainer>
     </>
