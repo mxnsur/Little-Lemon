@@ -73,4 +73,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 25,
   },
+  regularText: {
+    fontSize: 24,
+    padding: 20,
+    marginVertical: 8,
+    color: '#EDEFEE',
+    textAlign: 'center',
+  },
 });

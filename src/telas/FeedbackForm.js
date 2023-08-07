@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ScrollView, StyleSheet, Text, TextInput, KeyboardAvoidingView, Platform } from 'react-native';
+import { ScrollView, StyleSheet, Text, TextInput, KeyboardAvoidingView, Platform, Image, Alert } from 'react-native';
+import Button from "../componentes/Button";
 
 const FeedbackForm = () => { 
       const [firstName, onChangeFirstName] = useState(''); 
@@ -12,12 +13,14 @@ return (
     style={styles.container}
     behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
     <ScrollView keyboardDismissMode="on-drag"> 
+        <Image
+        style={styles.logo}
+        source={require("../img/littleLemon.png")}
+        />
         <Text style={styles.headingSection}> 
         Como foi sua visita ao restaurante Little Lemon?
          </Text> 
         <Text style={styles.infoSection}> 
-        Little Lemon é um charmoso bistrô de bairro que serve comida
-        simples e coquetéis clássicos em um ambiente animado, mas casual. 
         Adoraríamos ouvir sua experiência conosco! 
          </Text> 
         <TextInput 
@@ -25,13 +28,6 @@ return (
         value={firstName} 
         onChangeText={onChangeFirstName} 
         placeholder={'Nome'}
-        clearButtonMode={'always'}
-        /> 
-        <TextInput 
-        style={styles.input} 
-        value={lastName} 
-        onChangeText={onChangeLastName}
-        placeholder={'Sobrenome'} 
         clearButtonMode={'always'}
         /> 
         <TextInput 
@@ -51,6 +47,11 @@ return (
         maxLength={250}
         clearButtonMode={'always'}
         /> 
+
+        <Button
+        onPress={() => {Alert.alert("Obrigado pelo Feedback! :)"); }}>
+        Enviar
+       </Button>
     </ScrollView> 
     </KeyboardAvoidingView>
           ); 
@@ -60,37 +61,60 @@ return (
         container: { 
         flex: 1, 
         }, 
-        input: { 
-        height: 40, 
-        margin: 12, 
-        borderWidth: 1, 
-        padding: 10, 
-        fontSize: 16, 
-        borderColor: '#EDEFEE', 
-        backgroundColor: 'white', 
-        }, 
-        messageInput: { 
-        height: 100, 
-        margin: 12, 
-        borderWidth: 1, 
-        padding: 10, 
-        fontSize: 16, 
-        backgroundColor: 'white', 
-        }, 
-        infoSection: { 
-        fontSize: 24, 
-        padding: 10, 
-        marginVertical: 1, 
-        color: '#EDEFEE', 
-        textAlign: 'center', 
-        }, 
+
+        logo: {
+          marginTop: 40,
+          height: 140,
+          width: 300,
+          resizeMode: "contain",
+          marginBottom: 30,
+          alignSelf: 'center'
+        },
+
         headingSection: { 
-        fontSize: 28, 
-        padding: 20, 
-        marginVertical: 1, 
-        color: '#EDEFEE', 
-        textAlign: 'center', 
-              }, 
-            }); 
+          marginTop: 10,
+          color: '#333333',
+          textAlign: 'center',
+          fontSize: 30,
+          fontWeight: 'bold',
+          }, 
+          
+        infoSection: { 
+          marginVertical: 3,
+          fontSize: 16,
+          padding: 1,
+          color: '#333333',
+          textAlign: 'center',
+        }, 
+
+        input: { 
+          height: 40,
+          marginLeft: 30, 
+          marginRight: 30, 
+          marginTop: 10,
+          borderWidth: 1, 
+          padding: 10, 
+          fontSize: 16, 
+          borderColor: '#cfd4d2', 
+          backgroundColor: 'white', 
+          borderRadius: 8,
+          borderWidth: 2,
+          }, 
+  
+        messageInput: { 
+          height: 90, 
+          marginLeft: 30, 
+          marginRight: 30, 
+          marginTop: 10,
+          marginVertical: 15,
+          borderWidth: 1, 
+          padding: 10, 
+          fontSize: 16, 
+          borderColor: '#cfd4d2', 
+          backgroundColor: 'white', 
+          borderRadius: 8,
+          borderWidth: 2,
+          }, 
+     }); 
             
 export default FeedbackForm; 

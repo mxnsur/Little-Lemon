@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, SectionList, Pressable } from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet, SectionList } from 'react-native';
 
 const menuItemsToDisplay = [
     {
@@ -88,7 +88,7 @@ const menuItemsToDisplay = [
   const menuStyles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: "#333333"
+      backgroundColor: "#FFFFFF"
     },
     innerContainer: {
         paddingHorizontal: 40,
@@ -97,8 +97,8 @@ const menuItemsToDisplay = [
         justifyContent: 'space-between',
     },
     sectionHeader: {
-      backgroundColor: '#ee9972',
-      color: '#333333',
+      backgroundColor: '#3e6a5d',
+      color: '#ffffff',
       paddingHorizontal: 10,
       paddingVertical: 5,
       fontSize: 25,
@@ -106,15 +106,15 @@ const menuItemsToDisplay = [
       textAlign: 'center',
     },
     itemText: {
-      color: '#F4CE14',
+      color: '#333333',
       fontSize: 18,
     },
     separator: {
-      borderBottomWidth: 1,
-      borderColor: '#EDEFEE',
+      borderBottomWidth: 1.5,
+      borderColor: '#dbdbdb',
     },
     footerText: {
-      color: '#EDEFEE',
+      color: '#333333',
       fontSize: 12,
       flexWrap: 'wrap',
       textAlign: 'center',
