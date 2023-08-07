@@ -18,7 +18,7 @@ const SubscribeScreen = () => {
         source={require("../img/littleLemon.png")}
       />
       <Text style={styles.title}>
-       Assine a nossa newsletter para as nossas últimas receitas deliciosas!
+       Fique por dentro das atualizações e eventos do Bistrô
       </Text>
       <TextInput
         style={styles.input}
@@ -34,7 +34,7 @@ const SubscribeScreen = () => {
         }}
         enabled={!isEmailValid}
       >
-        Inscreva-se
+        Receber novidades
       </Button>
     </ScrollView>
     </KeyboardAvoidingView>
