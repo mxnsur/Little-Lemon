@@ -17,12 +17,23 @@ const styles = StyleSheet.create({
     padding: 5,
     marginLeft: 30, 
     marginRight: 30, 
+    marginVertical: 20,
     backgroundColor: '#3e6a5d',
     borderColor: '#3e6a5d',
     borderWidth: 6,
     borderRadius: 90,
     flexDirection: 'row',
     justifyContent: 'center',
+    //ios
+    shadowOffset: {
+      width: 0,
+      height: 8,
+     },
+     shadowOpacity: 0.4,
+     shadowRadius: 8.0,
+     //fim ios
+     elevation: 10,
+     //android
   },
   disabled: {
     backgroundColor: 'grey',

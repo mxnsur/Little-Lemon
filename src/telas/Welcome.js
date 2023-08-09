@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Image, StyleSheet, Text, Pressable } from 'react-native';
+import { View, Image, StyleSheet, Text, Pressable ,} from 'react-native';
+import Button from "../componentes/Button";
 
 const Welcome = ({ navigation }) => {
   return (
@@ -15,13 +16,16 @@ const Welcome = ({ navigation }) => {
       clássicos num ambiente animado e confortável.
       </Text>
 
+
       <Pressable onPress={() => navigation.navigate('Cardápio')} style={styles.button}>
       <Text style={styles.buttonText}>
         Conheça nosso cardápio
       </Text>
 
       </Pressable>
-      <Pressable onPress={() => navigation.navigate('Newsletter')} style={styles.buttonNews}>
+
+      
+      <Pressable onPress={() => navigation.navigate('Newsletter')} style={styles.button}>
       <Text style={styles.buttonText}>
         Newsletter
       </Text>
@@ -57,21 +61,31 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   button: {
-    marginTop: 25,
-    padding: 5,
-    margin: 10,
-    marginVertical: 1,
-    backgroundColor: '#3e6a5d',
-    borderColor: '#3e6a5d',
-    borderWidth: 6,
-    borderRadius: 12,
-    flexDirection: 'row',
-    justifyContent: 'center',
+      padding: 5,
+      marginTop: 20,
+      marginLeft: 30, 
+      marginRight: 30, 
+      backgroundColor: '#3e6a5d',
+      borderColor: '#3e6a5d',
+      borderWidth: 6,
+      borderRadius: 90,
+      flexDirection: 'row',
+      justifyContent: 'center',
+      //ios
+      shadowOffset: {
+        width: 0,
+        height: 8,
+       },
+       shadowOpacity: 0.4,
+       shadowRadius: 8.0,
+       //fim ios
+       elevation: 10,
+       //android
+       
   },
   buttonText: {
-    color: '#FFFFFF',
-    textAlign: 'center',
-    fontSize: 20,
+    fontSize: 16,
+    color: 'white',
   },
   regularText: {
     fontSize: 20,
