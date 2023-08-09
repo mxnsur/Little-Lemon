@@ -36,7 +36,7 @@ return (
         onChangeText={onChangePhoneNumber} 
         placeholder={'Celular'} 
         keyboardType={"phone-pad"}
-        clearButtonMode={'always'} 
+        clearButtonMode={'always'}
       /> 
          <TextInput 
         style={styles.messageInput} 
