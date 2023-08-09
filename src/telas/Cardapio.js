@@ -88,7 +88,7 @@ const menuItemsToDisplay = [
   const menuStyles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: "#FFFFFF"
+      backgroundColor: "#fafafa"
     },
     innerContainer: {
         paddingHorizontal: 40,
@@ -138,7 +138,7 @@ const menuItemsToDisplay = [
       fontSize: 24,
       padding: 20,
       marginVertical: 8,
-      color: '#EDEFEE',
+      color: '#fafafa',
       textAlign: 'center',
     },
   });

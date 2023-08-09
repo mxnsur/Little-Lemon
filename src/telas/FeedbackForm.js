@@ -60,6 +60,7 @@ return (
     const styles = StyleSheet.create({ 
         container: { 
         flex: 1, 
+        backgroundColor: "#fafafa"
         }, 
 
         logo: {
@@ -83,7 +84,7 @@ return (
           marginVertical: 3,
           fontSize: 16,
           padding: 1,
-          color: '#333333',
+          color: '#fafafa',
           textAlign: 'center',
         }, 
 
